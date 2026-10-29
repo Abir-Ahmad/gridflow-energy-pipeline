@@ -1,0 +1,37 @@
+{
+  "official_url": "https://api.neso.energy/dataset/8f2fe0af-871c-488d-8bad-960426f24601/resource/f6d02c0f-957b-48cb-82ee-09003f2ba759/download/demanddata_2024.csv",
+  "downloaded_on": "2026-10-29",
+  "bytes": 1809707,
+  "sha256": "fa7895b6e9ab5eb1b450949d969cb18ffeb6005359fc71c79c87e1c47e59cac6",
+  "headers": [
+    "SETTLEMENT_DATE",
+    "SETTLEMENT_PERIOD",
+    "ND",
+    "TSD",
+    "ENGLAND_WALES_DEMAND",
+    "EMBEDDED_WIND_GENERATION",
+    "EMBEDDED_WIND_CAPACITY",
+    "EMBEDDED_SOLAR_GENERATION",
+    "EMBEDDED_SOLAR_CAPACITY",
+    "NON_BM_STOR",
+    "PUMP_STORAGE_PUMPING",
+    "SCOTTISH_TRANSFER",
+    "IFA_FLOW",
+    "IFA2_FLOW",
+    "BRITNED_FLOW",
+    "MOYLE_FLOW",
+    "EAST_WEST_FLOW",
+    "NEMO_FLOW",
+    "NSL_FLOW",
+    "ELECLINK_FLOW",
+    "VIKING_FLOW",
+    "GREENLINK_FLOW"
+  ],
+  "input_records": 17568,
+  "existing_database_records": 17568,
+  "matches_existing_database_in_order": true,
+  "clock_change_counts": {
+    "27-OCT-2024": 50,
+    "31-MAR-2024": 46
+  }
+}

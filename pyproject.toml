@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gridflow-energy-pipeline"
+version = "1.0.0"
+description = "Validated, incremental NESO electricity data pipeline"
+requires-python = ">=3.10"
+dependencies = ["SQLAlchemy==2.0.46"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+postgres = ["psycopg[binary]==3.2.10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

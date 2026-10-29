@@ -1,0 +1,22 @@
+name: GridFlow tests and SQLite smoke
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ".[test]"
+      - run: python -m pytest -q
+      - name: Ingest and rerun real-data sample
+        run: |
+          python -m gridflow tests/fixtures/sample.csv --artifacts artifacts/ci
+          python -m gridflow tests/fixtures/sample.csv --artifacts artifacts/ci
+          python -c "import sqlite3; c=sqlite3.connect('gridflow.db'); assert c.execute('SELECT COUNT(*) FROM energy_records').fetchone()[0] == 4"
